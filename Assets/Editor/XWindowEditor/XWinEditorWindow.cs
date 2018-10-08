@@ -14,6 +14,8 @@ public class XWinEditorWindow : EditorWindow
         public GUIContent title_Work = new GUIContent("Work");
         public GUIContent title_Attribute = new GUIContent("Attribute");
 
+        public GUIContent text_Align = new GUIContent("Align");
+
         public GUIStyle dragtabdropwindow = "dragtabdropwindow";
         public GUIStyle toolbar = "Toolbar";
         public GUIStyle toolbarButton = "toolbarbutton";
@@ -108,7 +110,7 @@ public class XWinEditorWindow : EditorWindow
 
     public void AddControl(ControlType type, Vector2 position)
     {
-        var element = new ControlElement() {id = model.GenerateUniqueID(), name = type.ToString()};
+        var element = new ControlElement() {id = model.GenerateUniqueID(), name = type.ToString(), position = position};
         model.AddElement(element, model.root, 0);
     }
 

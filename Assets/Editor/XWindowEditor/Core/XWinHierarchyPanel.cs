@@ -7,6 +7,10 @@ using UnityEditor.TreeView;
 [System.Serializable]
 public class XWinHierarchyPanel : XWinPanel
 {
+    public ControlsTreeView treeView
+    {
+        get { return m_TreeView; }
+    }
 
     [SerializeField] TreeViewState m_TreeViewState;
 

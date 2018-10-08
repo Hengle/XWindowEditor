@@ -35,7 +35,9 @@ public class XWinControlsPanel : XWinPanel
             if (XWinGUI.ControlPreview(new Rect(0,i*18,areaRect.width,18),  workPanelRect,
                 new GUIContent(types.GetValue(i).ToString()), XWinEditorWindow.styles.toolbarButton))
             {
-                m_Window.AddControl((ControlType)types.GetValue(i), Event.current.mousePosition);
+                m_Window.AddControl((ControlType) types.GetValue(i),
+                    new Vector2(Event.current.mousePosition.x + areaRect.x - m_WorkPanelRect.x,
+                        Event.current.mousePosition.y + areaRect.y - m_WorkPanelRect.y - 36));
             }
         }
 
